@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../share/bootstrap-3.3.0-dist/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div><button onclick="Revoked()">撤销</button></div>
+    <table class="table table-bordered table-striped">
+        <theand>
+            <tr><th>测试</th><th>撤销</th><th>删除</th></tr>
+        </theand>
+        <tbody>
+            <tr id="Line_1" class="TrMark"><td>撤销删除1</td><td>撤销删除</td><td>撤销删除 <a href="#" onclick="HideLine('Line_1')">Delete</a></td></tr>
+            <tr id="Line_2" class="TrMark"><td>撤销删除2</td><td>撤销删除</td><td>撤销删除 <a href="#" onclick="HideLine('Line_2')">Delete</a></td></tr>
+            <tr id="Line_3" class="TrMark"><td>撤销删除3</td><td>撤销删除</td><td>撤销删除 <a href="#" onclick="HideLine('Line_3')">Delete</a></td></tr>
+            <tr id="Line_4" class="TrMark"><td>撤销删除4</td><td>撤销删除</td><td>撤销删除 <a href="#" onclick="HideLine('Line_4')">Delete</a></td></tr>
+            <tr id="Line_5" class="TrMark"><td>撤销删除5</td><td>撤销删除</td><td>撤销删除 <a href="#" onclick="HideLine('Line_5')">Delete</a></td></tr>
+        </tbody>
+    </table>
+    <!--撤销-->
+    <div id="wrap">
+        <div id="show"></div>
+        <input type="button" value="a" />
+        <input type="button" value="b" />
+        <input type="button" value="c" />
+        <input type="button" value="撤销" />
+    </div>
+</body>
+<script src="../share/jquery-3.1.1.min/jquery-3.1.1.min.js"></script>
+<script>
+    /* 撤 销 */
+    var delArr = new Array(),k=0;
+
+
+    function HideLine(id) {
+        if (document.getElementById(id).parentNode.getElementsByClassName('TrMark').length == 1) {
+            return;
+        } else {
+            $('#'+id).attr("hidden", "hidden");
+            $('#'+id).removeAttr("class");
+            delArr[k]=$('#'+id);
+            k++;
+        }
+    }
+    function Revoked(){
+        if(k>0){
+            k--;
+            var current = delArr[k];
+            current[0].hidden=false;
+        }else{
+            return false;
+        }
+    }
+
+
+    /*撤销*/
+        var odiv = document.getElementById('show');
+        var oinput = document.getElementById('wrap').getElementsByTagName('input');
+        var a = new Array(),
+        j = 0;
+        for (var i = oinput.length - 2; i >= 0; i--) {
+        oinput[i].onclick = function(){
+            var str = this.value;
+            a[j] = odiv.innerText;
+            j++;
+            odiv.innerText += str;
+        }
+    }
+        oinput[3].onclick = function(){
+        j--;
+        odiv.innerText = a[j];
+    }
+</script>
+</html>

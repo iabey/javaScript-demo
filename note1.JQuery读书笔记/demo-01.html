@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../share/jquery-3.1.1.min/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="demo.css">
+    <title>Jquery</title>
+</head>
+<body>
+    <div class="link-write box" id="link-write">
+        <h4>链式书写</h4>
+        <p>我是外壳</p>
+        <div class="subject" id="subject">
+            <a href="#"><p> Click Me to See what happen</p></a>
+        </div>
+        <div class="content" id="content">
+            <p>this is content</p>
+        </div>
+    </div>
+    <div class="control-DOM box">
+        <h4>控制DOM</h4>
+        <div class="input-Content">
+            <div><span>姓名：</span><input type="text" id="controlDOM-Name"></div>
+            <div><span>性别：</span><input type="radio" value="man" name="sex" id="controlDOMSex">man<input type="radio" value="female" name="sex">female</div>
+            <div><button id="controlDOMSubmit">Submit</button></div>
+        </div>
+        <div class="showDOM" id="showDOM">
+
+        </div>
+    </div>
+    <div class="controlCSS box">
+        <h4>控制页面CSS</h4>
+        <div class="controlCSS">
+            <p>点击这个div，see what to happen</p>
+        </div>
+
+    </div>
+    <div class="Chooser box">
+        <h4>第2章 选择器</h4>
+        <div class="table">
+            <h5>table隔行变色</h5>
+            <table id="TableChangeColor">
+                <thead>
+                    <tr><th>111</th><th>222</th><th>333</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>111</td><td>111</td><td>111</td></tr>
+                    <tr><td>222</td><td>222</td><td>222</td></tr>
+                    <tr><td>333</td><td>333</td><td>333</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="apply-nav">
+            <div id="divFrame">
+                <div class="clsHead">
+                    <h3>图书分类</h3>
+                    <span>..</span>
+                </div>
+                <div class="clsContent">
+                    <ul>
+                        <li><a href="#">小说</a><i>(1000)</i></li>
+                        <li><a href="#">小说</a><i>(1000)</i></li>
+                        <li><a href="#">小说</a><i>(1000)</i></li>
+                        <li><a href="#">小说</a><i>(1000)</i></li>
+                        <li><a href="#">小说</a><i>(1000)</i></li>
+                        <li><a href="#">小说</a><i>(1000)</i></li>
+                        <li><a href="#">小说</a><i>(1000)</i></li>
+                        <li><a href="#">小说</a><i>(1000)</i></li>
+                    </ul>
+                    <div class="clsBot">
+                        <a href="#">简化</a>》
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="baseChoose box">
+
+    </div>
+
+    <script src="demo.js"></script>
+</body>
+</html>

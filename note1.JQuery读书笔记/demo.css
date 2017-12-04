@@ -1,0 +1,44 @@
+.box{
+    border:1px solid #999;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;
+}
+a{
+    text-decoration: none;
+}
+h4{
+    color: #149bdf;
+}
+table{
+    border-collapse:collapse;
+
+}
+table tr td,table tr th{
+    border: 1px solid #999;
+}
+.content{
+    display: none;
+}
+.subject,.content{
+    border: 1px solid #999;
+}
+.divCurrent{
+    background-color: #ff8636;
+}
+/*再次点击 切换css样式*/
+.controlToggleCss{
+    background-color: #0099ff;
+}
+/*table 隔行变色*/
+.trOdd{
+    background-color: #9acfea;
+}
+
+/*第二章 应用 -- nav*/
+#divFrame{
+    margin-top: 20px;
+    border:solid 1px #666;
+    width:300px;
+    overflow: hidden;
+}
