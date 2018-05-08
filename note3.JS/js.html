@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SOJ算法</title>
+    <style>
+        .main{
+            margin: 0 auto;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div  class="main">
+        <div>
+            <input type="text" id="rebackName" placeholder="接受文件名，返回扩展名" /><button onclick="rebackName()">确定</button>
+        </div>    
+        <div>
+            <input type="text" id="#101" placeholder="解析字符串,返回：.之间子串" /><button onclick="extraStr()">确定</button>
+        </div>
+    </div>
+</body>
+<script>
+        function rebackName(){
+            let name = document.getElementById("rebackName").value;
+            let arr = name.split('.');
+            if(arr.length<2 || arr.length == 2 && arr[0] == ""){
+                console.log('');
+            }else{
+                console.log('.'+ arr[arr.length-1]);
+            }
+        }
+</script>
+</html>
