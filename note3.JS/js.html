@@ -19,19 +19,19 @@
             <input type="text" id="rebackName" placeholder="接受文件名，返回扩展名" /><button onclick="rebackName()">确定</button>
         </div>    
         <div>
-            <input type="text" id="#101" placeholder="解析字符串,返回：.之间子串" /><button onclick="extraStr()">确定</button>
+            <input type="text" id="#101" placeholder="解析字符串,返回：.之间子串" /><button>确定</button>
         </div>
     </div>
 </body>
 <script>
-        function rebackName(){
-            let name = document.getElementById("rebackName").value;
-            let arr = name.split('.');
-            if(arr.length<2 || arr.length == 2 && arr[0] == ""){
-                console.log('');
-            }else{
-                console.log('.'+ arr[arr.length-1]);
-            }
+    function rebackName(){
+        let name = document.getElementById("rebackName").value;
+        let arr = name.split('.');
+        if(arr.length<2 || arr.length == 2 && arr[0] == ""){
+            console.log('');
+        }else{
+            console.log('.'+ arr[arr.length-1]);
         }
+    }
 </script>
 </html>
